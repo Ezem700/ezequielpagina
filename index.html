@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio | Tecnología y Gadgets</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <style>
+        .image-container {
+            display: flex;
+        }
+        .image-container img {
+            flex: 1;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="gadgets.html">Tienda</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Últimas Tendencias en Tecnología</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Bienvenido a la revolución tecnológica</h2>
+            <p>Explora las innovaciones más recientes en el mundo de la tecnología y los gadgets. Desde smartphones de última generación hasta dispositivos inteligentes para el hogar, descubre cómo la tecnología está transformando nuestra vida diaria.</p>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://www.lavanguardia.com/files/content_image_mobile_filter/uploads/2019/07/25/5fa52fa4e9d77.png" alt="Horizontal" width="400">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://imagenes.krimaxsoft.com/seisa/SUC_4/IMG/PRD/141756/141756_1.png" alt="Imagen 2" width="400">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Eze Technologies</p>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>
