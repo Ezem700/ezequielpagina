@@ -274,7 +274,7 @@ form button:hover {
         padding: 28px 5px 15px 5px;
     }
     nav ul {
-        flex-direction: column;
+        flex-direction: row; /* Mantiene los ítems en fila */
         gap: 12px;
     }
     .swiper-container {
