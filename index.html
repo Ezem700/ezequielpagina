@@ -4,40 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio | Tecnología y Gadgets</title>
+    <meta name="description" content="Descubre las últimas tendencias en tecnología y gadgets. Explora innovaciones, smartphones, dispositivos inteligentes y más.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <style>
-        .image-container {
-            display: flex;
+        body {
+            background: linear-gradient(135deg, #0e0e0e 70%, #1a237e 100%);
+            color: #00ffea;
         }
-        .image-container img {
-            flex: 1;
-            padding: 10px;
+        main {
+            background: linear-gradient(135deg, #181c24 60%, #232b39 100%);
+            color: #b2ebf2;
+        }
+        section h2, h1 {
+            color: #00ffea;
+            text-shadow: 0 0 12px #00ffea99;
+        }
+        p {
+            color: #b2ebf2;
+            text-shadow: 0 0 4px #00ffea22;
         }
     </style>
 </head>
 <body>
-    <nav>
+    <nav aria-label="Navegación principal">
         <ul>
-            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html" aria-current="page">Inicio</a></li>
             <li><a href="gadgets.html">Tienda</a></li>
             <li><a href="contacto.html">Contacto</a></li>
         </ul>
     </nav>
     <header>
         <h1>Últimas Tendencias en Tecnología</h1>
+        <p>Innovación, gadgets y el futuro en tus manos</p>
     </header>
     <main>
-        <section>
-            <h2>Bienvenido a la revolución tecnológica</h2>
-            <p>Explora las innovaciones más recientes en el mundo de la tecnología y los gadgets. Desde smartphones de última generación hasta dispositivos inteligentes para el hogar, descubre cómo la tecnología está transformando nuestra vida diaria.</p>
-            <div class="swiper-container">
+        <section aria-labelledby="bienvenida">
+            <h2 id="bienvenida">Bienvenido a la revolución tecnológica</h2>
+            <p>
+                Explora las innovaciones más recientes en el mundo de la tecnología y los gadgets.<br>
+                Desde <span style="color:#00ffea;">smartphones</span> de última generación hasta dispositivos inteligentes para el hogar,<br>
+                descubre cómo la tecnología está transformando nuestra vida diaria.
+            </p>
+            <div class="swiper-container" aria-label="Galería de gadgets destacados">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="https://www.lavanguardia.com/files/content_image_mobile_filter/uploads/2019/07/25/5fa52fa4e9d77.png" alt="Horizontal" width="400">
+                        <img src="https://www.lavanguardia.com/files/content_image_mobile_filter/uploads/2019/07/25/5fa52fa4e9d77.png" alt="Smartphone de última generación" width="30%">
                     </div>
                     <div class="swiper-slide">
-                        <img src="https://imagenes.krimaxsoft.com/seisa/SUC_4/IMG/PRD/141756/141756_1.png" alt="Imagen 2" width="400">
+                        <img src="https://imagenes.krimaxsoft.com/seisa/SUC_4/IMG/PRD/141756/141756_1.png" alt="Dispositivo inteligente para el hogar" width="30%">
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
@@ -47,12 +62,16 @@
         </section>
     </main>
     <footer>
-        <p>© 2024 Eze Technologies</p>
+        <p>© 2024 Eze Technologies. Todos los derechos reservados.</p>
     </footer>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
             loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
@@ -60,6 +79,12 @@
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
+            },
+            a11y: {
+                enabled: true,
+                prevSlideMessage: 'Imagen anterior',
+                nextSlideMessage: 'Siguiente imagen',
+                paginationBulletMessage: 'Ir a la diapositiva {{index}}',
             },
         });
     </script>
