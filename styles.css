@@ -256,6 +256,31 @@ form button:hover {
     box-shadow: 0 0 16px #2196f3;
 }
 
+/* --- ESTILO PARA LOS BOTONES DE PRODUCTOS --- */
+button {
+    background: linear-gradient(90deg, #00ffea 0%, #1a237e 100%);
+    color: #0e0e0e;
+    font-family: 'Orbitron', 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 12px 28px;
+    margin: 10px 8px 0 0;
+    border: 2px solid #00ffea;
+    border-radius: 8px;
+    box-shadow: 0 0 12px #00ffea55, 0 2px 8px #1a237e44;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+button:hover, button:focus {
+    background: linear-gradient(90deg, #1a237e 0%, #00ffea 100%);
+    color: #00ffea;
+    border-color: #1a237e;
+    box-shadow: 0 0 24px #00ffea, 0 2px 16px #1a237e;
+    outline: none;
+}
+
 ::-webkit-scrollbar {
     width: 10px;
     background: #10151b;

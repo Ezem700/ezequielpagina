@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra | Tecnología y Gadgets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="gadgets.html">Tienda</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
+            <li><a href="compra.html">Comprar</a></li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Finalizar Compra</h1>
+    </header>
+    <main>
+        <form>
+            <h2>Datos de envío y pago</h2>
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="tarjeta">Número de tarjeta</label>
+            <input type="text" id="tarjeta" name="tarjeta" maxlength="19" required placeholder="XXXX XXXX XXXX XXXX">
+
+            <label for="vencimiento">Fecha de vencimiento</label>
+            <input type="month" id="vencimiento" name="vencimiento" required>
+
+            <label for="cvv">CVV</label>
+            <input type="password" id="cvv" name="cvv" maxlength="4" required placeholder="XXX">
+
+            <button type="submit">Pagar</button>
+        </form>
+    </main>
+    <footer>
+        <p>© 2024 Eze Technologies</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
