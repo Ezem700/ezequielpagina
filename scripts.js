@@ -66,8 +66,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Función para vaciar el carrito
+    function vaciarCarrito() {
+        localStorage.removeItem('carrito'); // Elimina la clave "carrito" de localStorage
+        const lista = document.getElementById('lista-carrito');
+        lista.innerHTML = "<li>Tu carrito está vacío.</li>";
+        alert('El carrito ha sido vaciado.');
+    }
+
     // Llama a mostrarCarrito si estás en carrito.html
     if (window.location.pathname.includes('carrito.html')) {
         mostrarCarrito();
+
+        // Evento para el botón "Vaciar carrito"
+        const botonVaciar = document.getElementById('vaciar-carrito');
+        if (botonVaciar) {
+            botonVaciar.addEventListener('click', vaciarCarrito);
+        }
     }
 });
