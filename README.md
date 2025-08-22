@@ -97,4 +97,4 @@ Iconos e imágenes de productos usados solo como ejemplo.
 
 ## Licencia
 
-Este proyecto es solo para
+Este proyecto es solo para fines educativos y demostrativos.
